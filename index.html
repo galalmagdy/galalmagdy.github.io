@@ -1,12 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .app {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .app-item {
+            width: 45%;
+            margin: 10px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .app-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .app-item img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .app-item h3 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .app-item p {
+            color: #666;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+<div class="container">
+    <h1>My Mobile App Portfolio</h1>
+    <div class="app">
+        <div class="app-item">
+            <img src="app1.png" alt="App 1">
+            <h3>App 1</h3>
+            <p>Description of App 1</p>
+        </div>
+        <div class="app-item">
+            <img src="app2.png" alt="App 2">
+            <h3>App 2</h3>
+            <p>Description of App 2</p>
+        </div>
+        <div class="app-item">
+            <img src="app3.png" alt="App 3">
+            <h3>App 3</h3>
+            <p>Description of App 3</p>
+        </div>
+        <div class="app-item">
+            <img src="app4.png" alt="App 4">
+            <h3>App 4</h3>
+            <p>Description of App 4</p>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
