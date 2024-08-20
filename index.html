@@ -21,6 +21,17 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
+        .intro {
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
         h1 {
             text-align: center;
             color: #333;
@@ -69,46 +80,54 @@
 </head>
 <body>
 
-<div class="container">
-    <h1>My Mobile App Portfolio</h1>
-    <div class="app">
-        <div class="app-item">
-            <img src="image\catalog.png" alt="App 1">
-            <h3>Catalog</h3>
-            <p>App to show avilable items in stores</p>
+    <div class="container">
+        <div class="intro" id="intro">
+            <h2>Welcome!</h2>
+            <p>My name is Galal Magdy, a passionate mobile app developer with experience in building a variety of mobile applications. I specialize in Android development, iOS development, cross-platform solutions. Below is a collection of some of the projects I’ve worked on.</p>
         </div>
-        <div class="app-item">
-            <img src="image\btc.jpg" alt="App 2">
-            <h3>Btc Shop</h3>
-            <p>Sell Btc Products</p>
-        </div>
-        <div class="app-item">
-            <img src="image\odyssey.jpg" alt="App 3">
-            <h3>Odyssey</h3>
-            <p>Sell Odyssey Products</p>
-        </div>
-        <div class="app-item">
-            <img src="image\Diamond.jpg" alt="App 4">
-            <h3>Diamond Hub</h3>
-            <p>Sell Diamond Products</p>
-        </div>
-		        <div class="app-item">
-            <img src="image\iop.png" alt="App 5">
-            <h3>Iram Egy Operation</h3>
-            <p>Operation Sales App for Iram</p>
-        </div>
-		        <div class="app-item">
-            <img src="image\eop.png" alt="App 6">
-            <h3>Egy Diamond Operation</h3>
-            <p>Operation Sales App for EGyDiamond</p>
-        </div>
-		        <div class="app-item">
-            <img src="image\nebka.png" alt="App 7">
-            <h3>Nebka</h3>
-            <p>Online Pharmacy</p>
+        <h1>My Mobile App Portfolio</h1>
+        <div class="app">
+            <div class="app-item">
+                <img src="image\catalog.png" alt="App 1">
+                <h3>Catalog</h3>
+                <p>App to show avilable items in stores</p>
+            </div>
+            <div class="app-item">
+                <img src="image\btc.jpg" alt="App 2">
+                <h3>Btc Shop</h3>
+                <p>Sell Btc Products</p>
+            </div>
+            <div class="app-item">
+                <img src="image\odyssey.jpg" alt="App 3">
+                <h3>Odyssey</h3>
+                <p>Sell Odyssey Products</p>
+            </div>
+            <div class="app-item">
+                <img src="image\Diamond.jpg" alt="App 4">
+                <h3>Diamond Hub</h3>
+                <p>Sell Diamond Products</p>
+            </div>
+            <div class="app-item">
+                <img src="image\iop.png" alt="App 5">
+                <h3>Iram Egy Operation</h3>
+                <p>Operation Sales App for Iram</p>
+            </div>
+            <div class="app-item">
+                <img src="image\eop.png" alt="App 6">
+                <h3>Egy Diamond Operation</h3>
+                <p>Operation Sales App for EGyDiamond</p>
+            </div>
+            <div class="app-item">
+                <img src="image\nebka.png" alt="App 7">
+                <h3>Nebka</h3>
+                <p>Online Pharmacy</p>
+            </div>
         </div>
     </div>
-</div>
-
+    <script>
+    window.onload = function() {
+        document.getElementById('intro').style.opacity = '1';
+    }
+    </script>
 </body>
 </html>
