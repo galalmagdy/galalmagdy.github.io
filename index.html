@@ -30,6 +30,7 @@
             text-align: center;
             max-width: 800px;
         }
+
         .profile-picture {
             width: 150px;
             height: 150px;
@@ -37,38 +38,29 @@
             border: 5px solid #fff;
             margin-bottom: 20px;
         }
-            .intro h2 {
-                margin: 0;
-                font-size: 2.5em;
-                margin-bottom: 10px;
-            }
 
-            .intro p {
-                font-size: 1.2em;
-                line-height: 1.5;
-            }
-
-        .scroll-down {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #fff;
-            font-size: 1.2em;
-            cursor: pointer;
+        .intro h2 {
+            margin: 0;
+            font-size: 2.5em;
+            margin-bottom: 10px;
         }
 
-            .scroll-down:hover {
-                text-decoration: underline;
-            }
+        .intro p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+
 
         .skills-section {
-            height: 850px;
-            padding: 40px 20px;
+            min-height: 100vh; /* Minimum height is full viewport */
             background-color: #444;
             color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Content starts at the top */
             text-align: center;
             position: relative;
+            overflow-y: auto;
         }
 
             .skills-section h2 {
@@ -80,6 +72,7 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            align-items: center; /* Center skills vertically */
         }
 
         .skills-item {
@@ -124,7 +117,7 @@
         }
 
         .app-item {
-            width: 45%;
+            width: 50%;
             margin: 10px;
             padding: 20px;
             background-color: #f9f9f9;
@@ -140,7 +133,8 @@
 
             .app-item img {
                 width: 100%;
-                height: 600px;
+                height: auto;
+                object-fit: cover; /* Ensures the image covers the container without stretching */
                 border-radius: 5px;
                 margin-bottom: 10px;
             }
@@ -164,11 +158,80 @@
             color: #fff;
             font-size: 1.2em;
             cursor: pointer;
+            margin-top: 20px; /* Adds space between the Concepts section and the scroll-down button */
+            align-self: center;
+            font-size: 1.2em;
+            cursor: pointer;
+            color: #fff;
         }
 
             .scroll-down:hover {
                 text-decoration: underline;
             }
+        .scroll-downn {
+            margin-top: auto;
+            padding: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            color: #fff;
+        }
+
+            .scroll-downn:hover {
+                text-decoration: underline;
+            }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .skills-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skills-item {
+                width: 80%;
+                text-align: center;
+            }
+
+            .app-item {
+                width: 100%; /* Make each app item take full width on smaller screens */
+                margin: 10px 0;
+            }
+
+                .app-item img {
+                    height: 750px; /* Limit the height to prevent excessive stretching */
+                }
+
+            .intro {
+                padding: 10px;
+                font-size: 1em;
+            }
+
+            .profile-picture {
+                width: 100px;
+                height: 100px;
+            }
+
+            .skills-section h2, .skills-item, .app-item h3 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skills-section h2, .skills-item, .app-item h3 {
+                font-size: 1.2em;
+            }
+
+            .intro h2 {
+                font-size: 2em;
+            }
+
+            .skills-item, .app-item {
+                padding: 10px;
+            }
+
+                .app-item img {
+                    height: 750px;
+                }
+        }
     </style></head>
 <body>
 
@@ -178,7 +241,8 @@
             <img src="image\me.jpg" alt="Profile Picture" class="profile-picture">
             <h2>Welcome!</h2>
             <p>My name is Galal Magdy, a passionate mobile app developer with experience in building a variety of mobile applications. I specialize in Android development, iOS development, cross-platform solutions. Below is a collection of some of the projects I’ve worked on.</p>
-            <p>Mobile: 00201010603376 --- E-mail: galalmagdywork@gmail.com</p>
+            <p>Mobile: 00201010603376 </p>
+            <p>E-mail: galalmagdywork@gmail.com</p>
         </div>
         <div class="scroll-down" onclick="scrollToSkills()">Scroll Down &#x2193;</div>
     </div>
@@ -217,7 +281,7 @@
             <div class="skills-item">Payment Methods</div>
             <div class="skills-item">ERP Api Integration (dynamics 356)</div>
         </div>
-        <div class="scroll-down" onclick="scrollToPortfolio()">Scroll Down &#x2193;</div>
+        <div class="scroll-downn" onclick="scrollToPortfolio()">Scroll Down &#x2193;</div>
     </div>
 
     <div class="portfolio-section" id="portfolio">
