@@ -13,7 +13,7 @@
         }
 
         .cv-section {
-            height: 100vh; /* Full height of the viewport */
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -50,29 +50,28 @@
             line-height: 1.5;
         }
 
-
         .skills-section {
-            min-height: 100vh; /* Minimum height is full viewport */
+            min-height: 100vh;
             background-color: #444;
             color: #fff;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Content starts at the top */
+            justify-content: flex-start;
             text-align: center;
             position: relative;
             overflow-y: auto;
         }
 
-            .skills-section h2 {
-                font-size: 2em;
-                margin-bottom: 20px;
-            }
+        .skills-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
 
         .skills-list {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            align-items: center; /* Center skills vertically */
+            align-items: center;
         }
 
         .skills-item {
@@ -85,9 +84,9 @@
             transition: transform 0.3s ease;
         }
 
-            .skills-item:hover {
-                transform: scale(1.05);
-            }
+        .skills-item:hover {
+            transform: scale(1.05);
+        }
 
         .portfolio-section {
             padding: 20px;
@@ -126,29 +125,30 @@
             transition: all 0.3s ease;
         }
 
-            .app-item:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            }
+        .app-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
 
-            .app-item img {
-                width: 100%;
-                height: auto;
-                object-fit: cover; /* Ensures the image covers the container without stretching */
-                border-radius: 5px;
-                margin-bottom: 10px;
-            }
+        .app-item img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
 
-            .app-item h3 {
-                text-align: center;
-                color: #333;
-                margin-bottom: 10px;
-            }
+        .app-item h3 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
 
-            .app-item p {
-                color: #666;
-                text-align: center;
-            }
+        .app-item p {
+            color: #666;
+            text-align: center;
+        }
 
         .scroll-down {
             position: absolute;
@@ -158,16 +158,14 @@
             color: #fff;
             font-size: 1.2em;
             cursor: pointer;
-            margin-top: 20px; /* Adds space between the Concepts section and the scroll-down button */
+            margin-top: 20px;
             align-self: center;
-            font-size: 1.2em;
-            cursor: pointer;
-            color: #fff;
         }
 
-            .scroll-down:hover {
-                text-decoration: underline;
-            }
+        .scroll-down:hover {
+            text-decoration: underline;
+        }
+
         .scroll-downn {
             margin-top: auto;
             padding: 10px;
@@ -176,80 +174,102 @@
             color: #fff;
         }
 
-            .scroll-downn:hover {
-                text-decoration: underline;
-            }
+        .scroll-downn:hover {
+            text-decoration: underline;
+        }
+
+        /* Fullscreen Modal Styles */
+        #imageModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #imageModal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.3);
+        }
+
+        #imageModal span {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 2em;
+            cursor: pointer;
+        }
+
         /* Responsive Design */
-@media (max-width: 768px) {
-    .skills-list {
-        flex-direction: column;
-        align-items: center;
-    }
+        @media (max-width: 768px) {
+            .skills-list {
+                flex-direction: column;
+                align-items: center;
+            }
 
-    .skills-item {
-        width: 80%;
-        text-align: center;
-    }
+            .skills-item {
+                width: 80%;
+                text-align: center;
+            }
 
-    .app-item {
-        width: 100%;
-        margin: 10px 0;
-    }
+            .app-item {
+                width: 100%;
+                margin: 10px 0;
+            }
 
-    .app-item img {
-        width: 100%;
-        height: auto;
-        max-height: 400px;
-        object-fit: contain;
-    }
+            .app-item img {
+                max-height: 400px;
+                object-fit: contain;
+            }
 
-    .intro {
-        padding: 10px;
-        font-size: 1em;
-    }
+            .intro {
+                padding: 10px;
+                font-size: 1em;
+            }
 
-    .profile-picture {
-        width: 100px;
-        height: 100px;
-    }
+            .profile-picture {
+                width: 100px;
+                height: 100px;
+            }
 
-    .skills-section h2,
-    .skills-item,
-    .app-item h3 {
-        font-size: 1.5em;
-    }
-}
+            .skills-section h2, .skills-item, .app-item h3 {
+                font-size: 1.5em;
+            }
+        }
 
-@media (max-width: 480px) {
-    .skills-section h2,
-    .skills-item,
-    .app-item h3 {
-        font-size: 1.2em;
-    }
+        @media (max-width: 480px) {
+            .skills-section h2, .skills-item, .app-item h3 {
+                font-size: 1.2em;
+            }
 
-    .intro h2 {
-        font-size: 2em;
-    }
+            .intro h2 {
+                font-size: 2em;
+            }
 
-    .skills-item,
-    .app-item {
-        padding: 10px;
-    }
+            .skills-item, .app-item {
+                padding: 10px;
+            }
 
-    .app-item img {
-        width: 100%;
-        height: auto;
-        max-height: 300px;
-        object-fit: contain;
-    }
-}
-    </style></head>
+            .app-item img {
+                max-height: 300px;
+            }
+        }
+    </style>
+</head>
 <body>
 
     <!-- CV Section -->
     <div class="cv-section" id="cv">
         <div class="intro" id="intro">
-            <img src="image\me.jpg" alt="Profile Picture" class="profile-picture">
+            <img src="image/me.jpg" alt="Profile Picture" class="profile-picture">
             <h2>Welcome!</h2>
             <p>My name is Galal Magdy, a passionate mobile app developer with experience in building a variety of mobile applications. I specialize in Android development, iOS development, cross-platform solutions. Below is a collection of some of the projects I’ve worked on.</p>
             <p>Mobile: 00201010603376 </p>
@@ -258,6 +278,7 @@
         <div class="scroll-down" onclick="scrollToSkills()">Scroll Down &#x2193;</div>
     </div>
 
+    <!-- Skills Section -->
     <div class="skills-section" id="skills">
         <h2>My Skills</h2>
         <div class="skills-list">
@@ -268,7 +289,7 @@
             <div class="skills-item">API Integration(Dynamics 356)</div>
             <div class="skills-item">Version Control (Git)</div>
         </div>
-        <h2>Programing Languages</h2>
+        <h2>Programming Languages</h2>
         <div class="skills-list">
             <div class="skills-item">Java</div>
             <div class="skills-item">Kotlin</div>
@@ -289,7 +310,7 @@
             <div class="skills-item">Android Studio(Android and flutter)</div>
             <div class="skills-item">Xcode(ios)</div>
             <div class="skills-item">Visual Studio(Maui and Blazor)</div>
-            <div class="skills-item">dynamics 356</div>
+            <div class="skills-item">Dynamics 356</div>
             <div class="skills-item">PyCharm(odoo)</div>
         </div>
         <h2>Concepts</h2>
@@ -302,51 +323,67 @@
         <div class="scroll-downn" onclick="scrollToPortfolio()">Scroll Down &#x2193;</div>
     </div>
 
+    <!-- Portfolio Section -->
     <div class="portfolio-section" id="portfolio">
         <div class="container">
             <h1>My Mobile App Portfolio</h1>
             <div class="app">
                 <div class="app-item">
-                    <img src="image\catalog.png" alt="App 1">
+                    <img src="image/catalog.png" alt="App 1">
                     <h3>Catalog</h3>
-                    <p>App to show avilable items in stores</p>
+                    <p>App to show available items in stores</p>
                 </div>
                 <div class="app-item">
-                    <img src="image\btc.jpg" alt="App 2">
+                    <img src="image/btc.jpg" alt="App 2">
                     <h3>Btc Shop</h3>
                     <p>Sell Btc Products</p>
                 </div>
                 <div class="app-item">
-                    <img src="image\odyssey.jpg" alt="App 3">
+                    <img src="image/odyssey.jpg" alt="App 3">
                     <h3>Odyssey</h3>
                     <p>Sell Odyssey Products</p>
                 </div>
                 <div class="app-item">
-                    <img src="image\Diamond.jpg" alt="App 4">
+                    <img src="image/Diamond.jpg" alt="App 4">
                     <h3>Diamond Hub</h3>
                     <p>Sell Diamond Products</p>
                 </div>
                 <div class="app-item">
-                    <img src="image\iop.png" alt="App 5">
+                    <img src="image/iop.png" alt="App 5">
                     <h3>Iram Egy Operation</h3>
                     <p>Operation Sales App for Iram</p>
                 </div>
                 <div class="app-item">
-                    <img src="image\eop.png" alt="App 6">
+                    <img src="image/eop.png" alt="App 6">
                     <h3>Egy Diamond Operation</h3>
                     <p>Operation Sales App for EGyDiamond</p>
                 </div>
                 <div class="app-item">
-                    <img src="image\nebka.png" alt="App 7">
+                    <img src="image/nebka.png" alt="App 7">
                     <h3>Nebka</h3>
                     <p>Online Pharmacy</p>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Fullscreen Image Modal -->
+    <div id="imageModal">
+        <img id="modalImage" src="" alt="Full Image">
+        <span onclick="closeModal()">&times;</span>
+    </div>
+
     <script>
         window.onload = function () {
             document.getElementById('intro').style.opacity = '1';
+
+            // Add click event to all app images
+            document.querySelectorAll('.app-item img').forEach(img => {
+                img.addEventListener('click', function () {
+                    document.getElementById('modalImage').src = this.src;
+                    document.getElementById('imageModal').style.display = 'flex';
+                });
+            });
         }
 
         function scrollToSkills() {
@@ -355,6 +392,10 @@
 
         function scrollToPortfolio() {
             document.querySelector('#portfolio').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
         }
     </script>
 </body>
