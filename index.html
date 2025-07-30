@@ -180,58 +180,69 @@
                 text-decoration: underline;
             }
         /* Responsive Design */
-        @media (max-width: 768px) {
-            .skills-list {
-                flex-direction: column;
-                align-items: center;
-            }
+@media (max-width: 768px) {
+    .skills-list {
+        flex-direction: column;
+        align-items: center;
+    }
 
-            .skills-item {
-                width: 80%;
-                text-align: center;
-            }
+    .skills-item {
+        width: 80%;
+        text-align: center;
+    }
 
-            .app-item {
-                width: 100%; /* Make each app item take full width on smaller screens */
-                margin: 10px 0;
-            }
+    .app-item {
+        width: 100%;
+        margin: 10px 0;
+    }
 
-                .app-item img {
-                    height: 750px; /* Limit the height to prevent excessive stretching */
-                }
+    .app-item img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+    }
 
-            .intro {
-                padding: 10px;
-                font-size: 1em;
-            }
+    .intro {
+        padding: 10px;
+        font-size: 1em;
+    }
 
-            .profile-picture {
-                width: 100px;
-                height: 100px;
-            }
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
 
-            .skills-section h2, .skills-item, .app-item h3 {
-                font-size: 1.5em;
-            }
-        }
+    .skills-section h2,
+    .skills-item,
+    .app-item h3 {
+        font-size: 1.5em;
+    }
+}
 
-        @media (max-width: 480px) {
-            .skills-section h2, .skills-item, .app-item h3 {
-                font-size: 1.2em;
-            }
+@media (max-width: 480px) {
+    .skills-section h2,
+    .skills-item,
+    .app-item h3 {
+        font-size: 1.2em;
+    }
 
-            .intro h2 {
-                font-size: 2em;
-            }
+    .intro h2 {
+        font-size: 2em;
+    }
 
-            .skills-item, .app-item {
-                padding: 10px;
-            }
+    .skills-item,
+    .app-item {
+        padding: 10px;
+    }
 
-                .app-item img {
-                    height: 750px;
-                }
-        }
+    .app-item img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: contain;
+    }
+}
     </style></head>
 <body>
 
